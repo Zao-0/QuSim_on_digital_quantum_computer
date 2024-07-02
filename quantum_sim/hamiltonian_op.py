@@ -27,7 +27,7 @@ def generate_operator(op,coeff,i:int,N:int):
             result = sparse.kron(result, op_dict[op])
         else:
             result = sparse.kron(result,eye)
-    return result
+    return result*coeff
     
 
 class HamiltonianOp(abc.ABC):
